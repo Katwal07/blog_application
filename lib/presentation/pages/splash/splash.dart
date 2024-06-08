@@ -14,14 +14,16 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     moveToOnBoardingScreen();
   }
-  moveToOnBoardingScreen()async{
-    await Future.delayed(const Duration(seconds: 3),(){
+
+  moveToOnBoardingScreen() async {
+    await Future.delayed(const Duration(seconds: 3), () {
       AutoRouter.of(context).push(const OnBoardingScreenRoute());
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: AppColor.primaryColor,
       body: Center(
         child: FadedScaleAnimation(
