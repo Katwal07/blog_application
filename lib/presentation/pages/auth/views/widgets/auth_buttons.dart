@@ -20,7 +20,7 @@ class AuthLoginRegisterButton extends StatelessWidget {
           12.h.heightBox,
           CommonElevatedButton(
             text: 'Register',
-            onPressed: () {},
+            onPressed: () =>  AutoRouter.of(context).push(const SignupRoute()),
             backgroundColor: Colors.transparent,
             borderColor: Colors.white,
           )

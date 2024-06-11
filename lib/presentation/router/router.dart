@@ -43,5 +43,12 @@ class AppRouter extends $AppRouter {
             child: child,
           ),
         ),
+        CustomRoute(
+          page: GeneralRoute.page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadedScaleAnimation(
+            child: child,
+          ),
+        ),
       ];
 }
