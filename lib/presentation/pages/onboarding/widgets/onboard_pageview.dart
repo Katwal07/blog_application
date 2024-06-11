@@ -1,4 +1,4 @@
-part of 'widgets_import.dart';
+part of 'onboard_widgets_import.dart';
 
 class HorizontalPageView extends StatelessWidget {
   const HorizontalPageView({
@@ -14,8 +14,8 @@ class HorizontalPageView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.asset(image,height: 313,width: 332,),
-        10.heightBox,
+        Image.asset(image,height: AppSizes.imageHeight.h,width: AppSizes.imageWidth.w,),
+        SizedBox(height: 51.h,),
         Text(
           text,
           style: Theme.of(context).textTheme.titleMedium,

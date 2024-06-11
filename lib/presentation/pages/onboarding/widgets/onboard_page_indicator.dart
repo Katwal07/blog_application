@@ -1,4 +1,4 @@
-part of 'widgets_import.dart';
+part of 'onboard_widgets_import.dart';
 
 class OnBoardPageIndicator extends StatelessWidget {
   const OnBoardPageIndicator({

@@ -1,3 +1,4 @@
+import 'package:blog_application/core/theme/custom_theme/text_button_theme.dart';
 import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
 import 'custom_theme/app_bar_theme.dart';
@@ -16,6 +17,7 @@ class AppTheme {
     scaffoldBackgroundColor: Colors.white,
     textTheme: AppTextTheme.lightTextTheme,
     elevatedButtonTheme: AppElevatedButtonTheme.lightElevatedButtonTheme,
+    textButtonTheme: AppTextButtonTheme.lightTextButtonTheme,
     appBarTheme: AppAppBarTheme.lightAppBarTheme,
     checkboxTheme: AppCheckBoxTheme.lightCheckBoxTheme,
     inputDecorationTheme: AppTextFieldTheme.lightInputDecorationTheme,

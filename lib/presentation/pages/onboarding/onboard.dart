@@ -1,4 +1,4 @@
-part of 'onboarding_imports.dart';
+part of 'onboard_imports.dart';
 
 @RoutePage()
 class OnBoardingScreen extends StatefulWidget {
@@ -19,13 +19,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-
-              /// --- OnBoarding Screen Logo
+              /// OnBoarding Heading Logo
               const OnBoardingHeadingLogo(),
 
-              63.heightBox,
+              SizedBox(
+                height: 10.h,
+              ),
 
-              /// --- OnBoarding Screen Horizontal PageView
+              /// OnBoardingScreen Horizontal PageViews
               PageView(
                 controller: onBoardingViewModel.pageController,
                 children: const [
@@ -44,17 +45,36 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ],
               ).flexible(),
 
-           
+              SizedBox(
+                height: 10.h,
+              ),
 
-              /// --- Get Started Button
-               GetStartedButton(buttonText: 'Get Started',onPresses: (){},),
+              /// Get Started Button
+              CommonElevatedButton(
+                text: 'Get Started',
+                onPressed: () => AutoRouter.of(context).push(
+                  const AuthRoute(),
+                ),
+              ),
 
-              61.heightBox,
+              SizedBox(
+                height: 51.h,
+              ),
 
-              /// --- Skip and Next Button and SmoothPageIndicator
-              OnBoardingSkipAndNextButton(onBoardingViewModel: onBoardingViewModel),
+              /// Next , Skip Button and OnBoarding Page Indicator
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                   CommonTextButton(buttonText: 'Skip',textStyle: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w700,color: AppColor.primaryColor),),
+                  OnBoardPageIndicator(
+                      onBoardingViewModel: onBoardingViewModel),
+                   CommonTextButton(buttonText: 'Next',textStyle: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w700,color: AppColor.primaryColor),),
+                ],
+              ),
 
-              61.heightBox,
+              SizedBox(
+                height: 41.h,
+              ),
             ],
           ),
         ),
@@ -62,12 +82,3 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     );
   }
 }
-
-
-
-
-
-
-
-
-

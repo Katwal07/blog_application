@@ -31,11 +31,11 @@ class _SplashScreenState extends State<SplashScreen> {
           scaleDuration: const Duration(seconds: 2),
           scaleCurve: Curves.fastOutSlowIn,
           fadeCurve: Curves.fastEaseInToSlowEaseOut,
-          child: const Image(
-            width: 139,
-            height: 42,
-            image: AssetImage(
-              AppImageStrings.splashScreenLogo,
+          child: Image(
+            width: AppSizes.logoWidth.w,
+            height: AppSizes.logoHeight.h,
+            image: const AssetImage(
+              AppImageStrings.mainLogo,
             ),
           ),
         ),

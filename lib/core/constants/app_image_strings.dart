@@ -2,19 +2,15 @@ class AppImageStrings {
   /// --- Background Image
   static const String backgroundImage = "assets/images/BackgroundImage.png";
 
-  /// --- Splash Screen Logo
-  static const String splashScreenLogo = "assets/logos/SplashScreenLogo.png";
-
-  /// --- OnBoarding Screen Heading Logo
-  static const String onBoardingScreenLogo =
-      "assets/logos/OnBoardingScreenHeadingLogo.png";
+  /// --- Main Logo
+  static const String mainLogo = "assets/logos/mainLogo.png";
 
   /// --- OnBoarding Screens Images
   static const String onBoardingImage1 =
-      "assets/images/OnBoardingImages/OnBoardingImage1.png";
+      "assets/images/OnBoardingImage1.png";
 
   static const String onBoardingImage2 =
-      "assets/images/OnBoardingImages/OnBoardingImage2.png";
+      "assets/images/OnBoardingImage2.png";
   static const String onBoardingImage3 =
-      "assets/images/OnBoardingImages/OnBoardingImage3.png";
+      "assets/images/OnBoardingImage3.png";
 }

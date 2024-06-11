@@ -1,3 +1,4 @@
+import 'package:blog_application/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppCheckBoxTheme{
@@ -13,10 +14,10 @@ class AppCheckBoxTheme{
     }),
     fillColor: MaterialStateProperty.resolveWith((states){
       if(states.contains(MaterialState.selected)){
-        return Colors.blue;
+        return AppColor.primaryColor;
       }else{
         return Colors.transparent;
       }
-    })
+    }),
   );
 }
