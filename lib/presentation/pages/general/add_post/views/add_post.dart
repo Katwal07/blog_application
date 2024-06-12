@@ -27,27 +27,66 @@ class _AddPostState extends State<AddPost> {
           IconButton(onPressed: () {}, icon: const Icon(FeatherIcons.check))
         ],
       ),
-      body: Padding(
+      body: ListView(
         padding: const EdgeInsets.all(24),
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadiusDirectional.circular(20)),
-              width: double.infinity,
-              height: 300,
+        children: [
+           Stack(
+             children: [
+               const Image(
+                image: AssetImage('assets/images/image_placeholder.webp'),),
+               Positioned(
+                bottom: 0,
+                right: 0,
+                child: IconButton(onPressed: (){}, icon: const Icon(FeatherIcons.camera)))
+             ],
+           ),
+          30.h.heightBox,
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'Title',
+              hintStyle: Theme.of(context).textTheme.bodyMedium,
             ),
-            30.h.heightBox,
-            TextField(
-              decoration: InputDecoration(hintText: 'Title',hintStyle: Theme.of(context).textTheme.bodyMedium,),
+          ),
+          10.h.heightBox,
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'Slug',
+              hintStyle: Theme.of(context).textTheme.bodyMedium,
             ),
-             10.h.heightBox,
-            TextField(
-              decoration: InputDecoration(hintText: 'Slug',hintStyle: Theme.of(context).textTheme.bodyMedium,),
+          ),
+          20.h.heightBox,
+          Container(
+             padding: const EdgeInsets.symmetric(horizontal: 20),
+            height: 60,
+            decoration:  BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10)
             ),
-          ],
-        ),
+            child:  Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Tags',style: Theme.of(context).textTheme.bodyMedium,),
+                const Icon(FeatherIcons.chevronRight)
+              ],
+            ),
+          ),
+           10.h.heightBox,
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            height: 60,
+            decoration:  BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10)
+            ),
+            child:  Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Categories',style: Theme.of(context).textTheme.bodyMedium,),
+                const Icon(FeatherIcons.chevronRight)
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

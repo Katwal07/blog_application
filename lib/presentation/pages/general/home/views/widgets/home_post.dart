@@ -16,15 +16,18 @@ class HomePostDetails extends StatelessWidget {
         children: [
           Padding(
             padding:
-                const EdgeInsets.only(bottom: 15, right: 6),
+                const  EdgeInsets.only(bottom: 15, right: 6),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Image(
-                width: 100.w,
-                height: 90.h,
-                fit: BoxFit.cover,
-                image: const AssetImage(
-                  AppImageStrings.backgroundImage,
+              borderRadius: BorderRadius.circular(18),
+              child: GestureDetector(
+                onTap: ()=> AutoRouter.of(context).push(const HomeDetailsPostRoute()),
+                child: Image(
+                  width: 130.w,
+                  height: 90.h,
+                  fit: BoxFit.cover,
+                  image: const AssetImage(
+                    AppImageStrings.backgroundImage,
+                  ),
                 ),
               ),
             ),
@@ -32,11 +35,14 @@ class HomePostDetails extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                Text(
-                  'Netflix Will Charge Money For Password Sharing',
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
-                  style: Theme.of(context).textTheme.titleLarge,
+                GestureDetector(
+                  onTap: () => AutoRouter.of(context).push(const HomeDetailsPostRoute()),
+                  child: Text(
+                    'Netflix Will Charge Money For Password Sharing',
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
                 ),
                 Row(
                   children: [
