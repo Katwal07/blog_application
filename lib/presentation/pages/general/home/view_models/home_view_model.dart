@@ -1,3 +1,5 @@
 part of '../views/home_imports.dart';
 
-class HomeViewModel{}
+class HomeViewModel{
+  final PageController pageController = PageController();
+}

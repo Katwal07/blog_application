@@ -13,17 +13,19 @@ class _AuthState extends State<Auth> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(AppImageStrings.backgroundImage))),
+        image: DecorationImage(
+          image: AssetImage(AppImageStrings.backgroundImage),
+        ),
+      ),
       child: const Scaffold(
           backgroundColor: Colors.transparent,
           body: Stack(
             children: [
               /// Auth Main Logo
-               AuthLogo(),
+              AuthLogo(),
 
               /// Auth description
-               AuthDesc(),
+              AuthDesc(),
 
               /// Login and Register Buttons
               AuthLoginRegisterButton(),
@@ -32,6 +34,3 @@ class _AuthState extends State<Auth> {
     );
   }
 }
-
-
-

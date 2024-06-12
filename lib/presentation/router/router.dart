@@ -43,12 +43,59 @@ class AppRouter extends $AppRouter {
             child: child,
           ),
         ),
+
         CustomRoute(
-          page: GeneralRoute.page,
+          page: UpdateCategoryRoute.page,
           transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-              FadedScaleAnimation(
+              FadeTransition(
+            opacity: animation,
             child: child,
           ),
         ),
+
+        CustomRoute(
+          page: AddNewCategoryRoute.page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadeTransition(
+            opacity: animation,
+            child: child,
+          ),
+        ),
+
+         CustomRoute(
+          page: GeneralRoute.page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadeTransition(
+            opacity: animation,
+            child: child,
+          ),
+        ),
+
+          CustomRoute(
+          page: AddNewTagRoute.page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadeTransition(
+            opacity: animation,
+            child: child,
+          ),
+        ),
+
+         CustomRoute(
+          page: UpdateTagRoute.page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadeTransition(
+            opacity: animation,
+            child: child,
+          ),
+        ),
+         CustomRoute(
+          page: HomeDetailsPostRoute.page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadeTransition(
+            opacity: animation,
+            child: child,
+          ),
+        ),
+        
       ];
 }
